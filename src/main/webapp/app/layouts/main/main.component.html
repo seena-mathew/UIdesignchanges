@@ -1,18 +1,22 @@
 <jhi-page-ribbon></jhi-page-ribbon>
-<div class="sidenav">
-    <jhi-sidebar></jhi-sidebar>
+<div>
+    <router-outlet name="navbar"></router-outlet>
 </div>
-<div class="main">
-    <div>
-        <router-outlet name="navbar"></router-outlet>
+<div class="mainContainer">
+    <div *ngIf="hideSideNav" class="bg-dark sideBarMenu">
+        <jhi-sidebar></jhi-sidebar>
     </div>
-
+    <div class="sideBarButton" (click)="collapseSideBar()">
+        <a>
+            <fa-icon class="collapse-button fa-2x" icon="angle-double-left"></fa-icon>
+        </a>
+    </div>
     <div class="container-fluid">
         <div class="card jh-card">
             <router-outlet></router-outlet>
         </div>
-
         <jhi-footer></jhi-footer>
     </div>
 </div>
+
 

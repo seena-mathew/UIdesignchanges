@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
   public menuItems: any[] | undefined;
   version: String;
   inProduction?: boolean;
-  isNavbarCollapsed = false;
+  isSubMenuCollapsed = false;
   swaggerEnabled?: boolean;
 
   constructor(
@@ -43,10 +43,6 @@ export class SidebarComponent implements OnInit {
     });
   }
 
-  collapseNavbar(): void {
-    this.isNavbarCollapsed = true;
-  }
-
   isAuthenticated(): boolean {
     return this.accountService.isAuthenticated();
   }
@@ -56,16 +52,15 @@ export class SidebarComponent implements OnInit {
   }
 
   logout(): void {
-    this.collapseNavbar();
     this.loginService.logout();
     this.router.navigate(['']);
   }
 
-  toggleNavbar(): void {
-    this.isNavbarCollapsed = !this.isNavbarCollapsed;
-  }
-
   getImageUrl(): string {
     return this.isAuthenticated() ? this.accountService.getImageUrl() : '';
+  }
+
+  collapseSubMenu(): void {
+    this.isSubMenuCollapsed = !this.isSubMenuCollapsed;
   }
 }

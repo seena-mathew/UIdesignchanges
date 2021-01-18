@@ -1,0 +1,22 @@
+.mainContainer {
+  display: flex;
+  flex-flow: row;
+}
+
+.sideBarMenu {
+  width: 280px;
+}
+
+.sideBarButton {
+  float: left;
+  color: #f1f1f1;
+  z-index: 1;
+  left: 0;
+  top: 61px;
+  background-color: #343a40 !important;
+}
+
+.collapse-button {
+  position: relative;
+  top: calc(40% - 20px);
+}

@@ -1,31 +1,38 @@
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
-/* ==========================================================================
-Logo styles
-========================================================================== */
-.logo-jhi {
-  height: 45px;
-  width: 45px;
-  display: inline-block;
-  vertical-align: middle;
-  background: url('../../../content/images/logo-jhipster.png') no-repeat center center;
-  background-size: contain;
+
+.sidebar-submenu {
+  padding-left: 5px;
+  font-size: 0.9rem;
 }
-.sidebar-version {
-  font-size: 0.65em;
-  color: $navbar-dark-color;
-}
-.navbar-title {
+.sidebutton {
+  float: left;
   color: #f1f1f1;
+  z-index: 1;
+  left: 0;
+  top: 61px;
+  background-color: #343a40 !important;
 }
-.nav-list {
-  padding-left: 40px;
-  padding-top: 30px;
-  color: #f1f1f1;
+.sidenav {
+  width: 85%;
+  z-index: 1;
+  left: 0;
+  top: 61px;
+  background-color: #343a40 !important;
+  float: left;
+  padding-left: 10px;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
-ul.no-bullets {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #7f7f7f;
 }
