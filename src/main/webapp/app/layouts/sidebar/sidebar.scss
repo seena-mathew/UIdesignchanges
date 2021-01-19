@@ -30,9 +30,13 @@
   text-decoration: none;
   color: #f1f1f1;
   display: block;
-  transition: 0.3s;
 }
 
 .sidenav a:hover {
   color: #7f7f7f;
+}
+
+ul.side-nav {
+  list-style-type: none;
+  padding-left: 10px;
 }

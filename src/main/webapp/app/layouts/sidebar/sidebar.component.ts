@@ -6,13 +6,6 @@ import { LoginModalService } from 'app/core/login/login-modal.service';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { Router } from '@angular/router';
 
-export interface RouteInfo {
-  path: string;
-  title: string;
-  icon: string;
-  class: string;
-}
-
 @Component({
   moduleId: module.id,
   selector: 'jhi-sidebar',
@@ -20,7 +13,6 @@ export interface RouteInfo {
   styleUrls: ['sidebar.scss'],
 })
 export class SidebarComponent implements OnInit {
-  public menuItems: any[] | undefined;
   version: String;
   inProduction?: boolean;
   isSubMenuCollapsed = false;
